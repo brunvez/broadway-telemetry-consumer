@@ -7,8 +7,7 @@ defmodule Telemetry.Application do
 
   def start(_type, _args) do
     children = [
-      # Starts a worker by calling: Telemetry.Worker.start_link(arg)
-      # {Telemetry.Worker, arg}
+      {MyBroadway, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
