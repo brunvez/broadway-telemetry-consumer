@@ -4,117 +4,132 @@ defmodule MyBroadway do
   alias Broadway.Message
 
   @subscriptions [
-    %{
+    %Subscription{
       id: 1,
+      delay: 10,
       endpoint: "http://localhost:3333/telemetry/1",
       devices: [
-        %{id: "device-17"},
-        %{id: "device-15"},
-        %{id: "device-9"},
-        %{id: "device-14"},
-        %{id: "device-20"},
-        %{id: "device-16"}
+        %Device{id: "device-17", name: "Device 17"},
+        %Device{id: "device-15", name: "Device 15"},
+        %Device{id: "device-9", name: "Device 9"},
+        %Device{id: "device-14", name: "Device 14"},
+        %Device{id: "device-20", name: "Device 20"},
+        %Device{id: "device-16", name: "Device 16"}
       ]
     },
-    %{
+    %Subscription{
       id: 2,
+      delay: 20,
       endpoint: "http://localhost:3333/telemetry/2",
       devices: [
-        %{id: "device-15"},
-        %{id: "device-11"},
-        %{id: "device-4"},
-        %{id: "device-2"},
-        %{id: "device-20"}
+        %Device{id: "device-15", name: "Device 15"},
+        %Device{id: "device-11", name: "Device 11"},
+        %Device{id: "device-4", name: "Device 4"},
+        %Device{id: "device-2", name: "Device 2"},
+        %Device{id: "device-20", name: "Device 20"}
       ]
     },
-    %{
+    %Subscription{
       id: 3,
+      delay: 30,
       endpoint: "http://localhost:3333/telemetry/3",
       devices: [
-        %{id: "device-25"},
-        %{id: "device-22"},
-        %{id: "device-13"},
-        %{id: "device-21"},
-        %{id: "device-9"},
-        %{id: "device-15"}
+        %Device{id: "device-25", name: "Device 25"},
+        %Device{id: "device-22", name: "Device 22"},
+        %Device{id: "device-13", name: "Device 13"},
+        %Device{id: "device-21", name: "Device 21"},
+        %Device{id: "device-9", name: "Device 9"},
+        %Device{id: "device-15", name: "Device 15"}
       ]
     },
-    %{
+    %Subscription{
       id: 4,
+      delay: 40,
       endpoint: "http://localhost:3333/telemetry/4",
       devices: [
-        %{id: "device-14"},
-        %{id: "device-8"},
-        %{id: "device-20"},
-        %{id: "device-4"},
-        %{id: "device-18"},
-        %{id: "device-10"}
+        %Device{id: "device-14", name: "Device 14"},
+        %Device{id: "device-8", name: "Device 8"},
+        %Device{id: "device-20", name: "Device 20"},
+        %Device{id: "device-4", name: "Device 4"},
+        %Device{id: "device-18", name: "Device 18"},
+        %Device{id: "device-10", name: "Device 10"}
       ]
     },
-    %{
+    %Subscription{
       id: 5,
+      delay: 50,
       endpoint: "http://localhost:3333/telemetry/5",
       devices: [
-        %{id: "device-8"},
-        %{id: "device-23"},
-        %{id: "device-25"},
-        %{id: "device-5"},
-        %{id: "device-3"}
+        %Device{id: "device-8", name: "Device 8"},
+        %Device{id: "device-23", name: "Device 23"},
+        %Device{id: "device-25", name: "Device 25"},
+        %Device{id: "device-5", name: "Device 5"},
+        %Device{id: "device-3", name: "Device 3"}
       ]
     },
-    %{
+    %Subscription{
       id: 6,
+      delay: 60,
       endpoint: "http://localhost:3333/telemetry/6",
       devices: [
-        %{id: "device-8"},
-        %{id: "device-13"},
-        %{id: "device-1"},
-        %{id: "device-24"},
-        %{id: "device-22"}
+        %Device{id: "device-8", name: "Device 8"},
+        %Device{id: "device-13", name: "Device 13"},
+        %Device{id: "device-1", name: "Device 1"},
+        %Device{id: "device-24", name: "Device 24"},
+        %Device{id: "device-22", name: "Device 22"}
       ]
     },
-    %{
+    %Subscription{
       id: 7,
+      delay: 70,
       endpoint: "http://localhost:3333/telemetry/7",
       devices: [
-        %{id: "device-14"},
-        %{id: "device-4"},
-        %{id: "device-3"},
-        %{id: "device-15"},
-        %{id: "device-25"},
-        %{id: "device-19"},
-        %{id: "device-16"}
+        %Device{id: "device-14", name: "Device 14"},
+        %Device{id: "device-4", name: "Device 4"},
+        %Device{id: "device-3", name: "Device 3"},
+        %Device{id: "device-15", name: "Device 15"},
+        %Device{id: "device-25", name: "Device 25"},
+        %Device{id: "device-19", name: "Device 19"},
+        %Device{id: "device-16", name: "Device 16"}
       ]
     },
-    %{
+    %Subscription{
       id: 8,
+      delay: 80,
       endpoint: "http://localhost:3333/telemetry/8",
       devices: [
-        %{id: "device-8"},
-        %{id: "device-12"},
-        %{id: "device-22"},
-        %{id: "device-20"},
-        %{id: "device-6"},
-        %{id: "device-4"}
+        %Device{id: "device-8", name: "Device 8"},
+        %Device{id: "device-12", name: "Device 12"},
+        %Device{id: "device-22", name: "Device 22"},
+        %Device{id: "device-20", name: "Device 20"},
+        %Device{id: "device-6", name: "Device 6"},
+        %Device{id: "device-4", name: "Device 4"}
       ]
     },
-    %{
+    %Subscription{
       id: 9,
+      delay: 90,
       endpoint: "http://localhost:3333/telemetry/10",
       devices: [
-        %{id: "device-5"},
-        %{id: "device-14"},
-        %{id: "device-16"},
-        %{id: "device-24"},
-        %{id: "device-2"},
-        %{id: "device-13"},
-        %{id: "device-3"}
+        %Device{id: "device-5", name: "Device 5"},
+        %Device{id: "device-14", name: "Device 14"},
+        %Device{id: "device-16", name: "Device 16"},
+        %Device{id: "device-24", name: "Device 24"},
+        %Device{id: "device-2", name: "Device 2"},
+        %Device{id: "device-13", name: "Device 13"},
+        %Device{id: "device-3", name: "Device 3"}
       ]
     },
-    %{
+    %Subscription{
       id: 10,
+      delay: 100,
       endpoint: "http://localhost:3333/telemetry/11",
-      devices: [%{id: "device-11"}, %{id: "device-16"}, %{id: "device-1"}, %{id: "device-10"}]
+      devices: [
+        %Device{id: "device-11", name: "Device 11"},
+        %Device{id: "device-16", name: "Device 16"},
+        %Device{id: "device-1", name: "Device 1"},
+        %Device{id: "device-10", name: "Device 10"}
+      ]
     }
   ]
 
@@ -192,6 +207,8 @@ defmodule MyBroadway do
   end
 
   defp send_readings_to_subscription(readings, %{endpoint: endpoint} = _subscription) do
-    HTTPoison.post(endpoint, Jason.encode!(%{readings: readings}), [{"Content-Type", "application/json"}])
+    HTTPoison.post(endpoint, Jason.encode!(%{readings: readings}), [
+      {"Content-Type", "application/json"}
+    ])
   end
 end
